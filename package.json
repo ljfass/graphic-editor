@@ -1,5 +1,5 @@
 {
-  "name": "angular-all",
+  "name": "graphic-editor",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -29,7 +29,6 @@
     "parser": "^0.1.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "vditor": "^3.8.13",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
