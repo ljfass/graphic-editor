@@ -1,0 +1,39 @@
+<mat-grid-list cols="3" rowHeight="2:2">
+  <mat-grid-tile colspan="1">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>组件库</mat-card-title>
+        <mat-card-subtitle>简易组件</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="First">
+          <div
+            style="padding: 5px"
+            draggable="true"
+            (dragstart)="handleDrag($event)"
+          >
+            小部件
+            <ng-template #toolContainer></ng-template>
+          </div>
+        </mat-tab>
+        <mat-tab label="Second">
+          <div style="padding: 5px">Content 2</div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="2">
+    <div
+      style="height: 100%; border: 1px solid red; width: 100%"
+      (drop)="handleDrop($event)"
+      (dragover)="allowDrop($event)"
+    >
+      <ng-template #toolContainerDrop></ng-template>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+<button mat-raised-button color="primary" (click)="HandleChangeClass()">
+  点击修实例还是类呢(先拖拽再修改)
+</button>

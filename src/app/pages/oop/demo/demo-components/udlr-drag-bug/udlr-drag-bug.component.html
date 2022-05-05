@@ -1,0 +1,66 @@
+<div style="width: 1200px; margin: 10px auto">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      {{ position ? position.screenX : "" }}
+      {{ position ? position.screenY : "" }}
+      {{ position ? position.clientX : "" }}
+      {{ position ? position.clientY : "" }}
+      {{ position ? position.pageX : "" }}
+      {{ position ? position.pageY : "" }}
+      {{ position ? position.offsetX : "" }}
+      {{ position ? position.offsetY : "" }}
+      {{ position ? position.x : "" }}
+      {{ position ? position.y : "" }}
+
+      <ul>
+        <li
+          #draggableS
+          (drag)="ondrag($event)"
+          (dragstart)="ondragstart($event)"
+          (drop)="ondrop($event)"
+          (dragover)="ondragover($event)"
+          (dragenter)="ondragenter($event)"
+          (dragleave)="ondragleave($event)"
+          (dragend)="ondragend($event)"
+          *ngFor="let item of data.A"
+          [draggable]="true"
+        >
+          {{ "可拖拽的" + item.name }}
+        </li>
+      </ul>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div
+        style="width: 100%; height: 100%; border: 1px solid pink"
+        (dragover)="ondragover($event)"
+      >
+        <!-- 给子标签停止传播功能 -->
+        <ul draggable="false" (dragover)="$event.stopImmediatePropagation()">
+          <li>
+            <h2>$event.stopImmediatePropagation() 包裹一层</h2>
+          </li>
+          <li>
+            {{ over ? over.offsetX : "" }}
+            {{ over ? over.offsetY : "" }}
+          </li>
+          <li *ngFor="let item of data.B" [draggable]="true">
+            {{ item.name }}
+          </li>
+        </ul>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile (dragover)="ondragover($event)">
+      <ul>
+        <li>
+          <h2>缺少$event.stopImmediatePropagation() 包裹 (bug)</h2>
+        </li>
+        <li *ngFor="let item of data.C">{{ item.name }}</li>
+      </ul></mat-grid-tile
+    >
+    <mat-grid-tile>
+      <ul>
+        <li *ngFor="let item of data.D">{{ item.name }}</li>
+      </ul></mat-grid-tile
+    >
+  </mat-grid-list>
+</div>
