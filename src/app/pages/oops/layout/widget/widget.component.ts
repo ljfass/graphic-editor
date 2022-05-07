@@ -11,4 +11,9 @@ export class WidgetComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  gridStyle = {
+    width: '50%',
+    textAlign: 'center',
+  };
 }

@@ -25,12 +25,16 @@ export class WidgetService {
 
   /** 记录创建的小组件 */
   recordState(widget: any) {
+    this.changeAllState(false);
     let receipt = Math.random();
     // let receipt = Date.now();
     this.widgetWhetherActiveState.push({
       id: receipt,
-      state: false,
+      state: true,
       component: widget,
+    });
+    setTimeout(() => {
+      this.subject$.next(this.widgetWhetherActiveState);
     });
     return receipt;
   }

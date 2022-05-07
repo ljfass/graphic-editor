@@ -1,14 +1,9 @@
-<div class="position universal-box" appHover="区域">
+<div class="position universal-box" appHover="区域" (click)="toggleSetting()">
   <div class="position" style="font-weight: 700" appHover="区块">
-    {{ areaHeading }}
+    <div class="position box" appHover="标题">区域标题</div>
   </div>
   <hr />
-  <div class="position box" appHover="文字">这是一个通用的可选中的框</div>
+  <div class="position" appHover="内容">
+    <ng-template #widgetContainer></ng-template>
+  </div>
 </div>
-
-<!-- <div (mouseover)="xuchengdong($event)">hello world</div> -->
-
-<!-- <ng-template [appHoverPro]="areaHeading">
-  <div>hello-world</div>
-</ng-template> -->
-<!-- <div *appHoverPro="areaHeading">结构型指令 - 没写</div> -->

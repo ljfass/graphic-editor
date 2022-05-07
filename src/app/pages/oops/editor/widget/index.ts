@@ -1,33 +1,43 @@
+import { ButtonSettingComponent } from './button-setting/button-setting.component';
 import { ButtonComponent } from './button/button.component';
+import { FromSettingComponent } from './from-setting/from-setting.component';
+import { FromComponent } from './from/from.component';
+import { TextSettingComponent } from './text-setting/text-setting.component';
 import { TextComponent } from './text/text.component';
 
 export interface Widget {
   //
 }
 
-export const WidgetGroup: Widget[] = [
+export const WidgetGroup = [
   {
     type: 'button',
-    component: ButtonComponent,
+    widget: ButtonComponent,
+    setting: ButtonSettingComponent,
   },
   {
     type: 'text',
-    component: TextComponent,
+    widget: TextComponent,
+    setting: TextSettingComponent,
   },
   {
-    type: 'button',
-    component: ButtonComponent,
-  },
-  {
-    type: 'text',
-    component: TextComponent,
-  },
-  {
-    type: 'button',
-    component: ButtonComponent,
+    type: 'from',
+    widget: FromComponent,
+    setting: FromSettingComponent,
   },
   {
     type: 'text',
-    component: TextComponent,
+    widget: TextComponent,
+    setting: TextSettingComponent,
+  },
+  {
+    type: 'button',
+    widget: ButtonComponent,
+    setting: ButtonSettingComponent,
+  },
+  {
+    type: 'text',
+    widget: TextComponent,
+    setting: TextSettingComponent,
   },
 ];

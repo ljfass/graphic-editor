@@ -1,6 +1,6 @@
 <div class="container">
   <header>
-    <h2 style="text-align: center">可视化-编辑器</h2>
+    <h2 style="text-align: center">Visualization - Editor</h2>
   </header>
   <main class="container_main">
     <!-- Left sidebar -->
@@ -11,11 +11,22 @@
 
     <!-- Main content -->
     <article class="container_middle">
-      <app-edit-region></app-edit-region>
+      <div class="edit-container">
+        <div
+          style="height: 100%; padding: 15px"
+          (mousedown)="onSelectRangeStart($event)"
+          (drop)="handleDrop($event)"
+          (dragover)="allowDrop($event)"
+        >
+          <ng-template #toolContainer></ng-template>
+        </div>
+      </div>
     </article>
 
     <!-- Right sidebar -->
-    <nav class="container_right"></nav>
+    <nav class="container_right">
+      <ng-template #settingContainer></ng-template>
+    </nav>
   </main>
   <footer>
     <div style="text-align: center; line-height: 30px">Footer</div>

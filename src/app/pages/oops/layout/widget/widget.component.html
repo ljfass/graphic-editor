@@ -1,5 +1,13 @@
 <div class="cards">
-  <div class="cards__item" *ngFor="let item of WidgetGroup">
+  <div style="text-align: center">组件库</div>
+  <!-- <hr /> -->
+  <div
+    nz-card-grid
+    [ngStyle]="gridStyle"
+    *ngFor="let item of WidgetGroup"
+    draggable="true"
+    (dragstart)="$event.dataTransfer.setData('Text', item.type)"
+  >
     {{ item.type }}
   </div>
 </div>

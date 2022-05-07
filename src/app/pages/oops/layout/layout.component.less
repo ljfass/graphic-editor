@@ -14,7 +14,6 @@
     flex-direction: row;
     .container_left {
       width: 15%;
-      background-color: #333;
       min-width: 200px;
     }
 
@@ -24,11 +23,16 @@
       /* 取剩余宽度 */
       flex-grow: 1;
       padding: 10px;
+      height: 100%;
+      .edit-container {
+        height: 100%;
+      }
     }
 
     .container_right {
       width: 20%;
       min-width: 200px;
+      padding: 10px;
     }
   }
 }

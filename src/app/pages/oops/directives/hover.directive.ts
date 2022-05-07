@@ -43,7 +43,7 @@ export class HoverDirective {
   @Input('appHover')
   text: string;
   ngOnInit() {
-    console.log(this.text);
+    // console.log(this.text);
   }
 
   createElement() {
