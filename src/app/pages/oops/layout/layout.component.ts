@@ -66,6 +66,7 @@ export class LayoutComponent implements OnInit {
   createWidget(index) {
     const { widget, setting } = WidgetGroup[index];
     const comFactory = this.cfr.resolveComponentFactory(AreaComponent);
+    console.log(comFactory);
     const setFactory = this.cfr.resolveComponentFactory(setting as any);
 
     const comInstance = this.toolContainer.createComponent(comFactory);

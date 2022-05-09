@@ -13,7 +13,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/oops/oops.module').then((m) => m.OopsModule),
   },
-  { path: '', redirectTo: 'oops', pathMatch: 'full' },
+  {
+    path: 'oopss',
+    loadChildren: () =>
+      import('./pages/oopss/oopss.module').then((m) => m.OopssModule),
+  },
+  { path: '', redirectTo: 'oopss', pathMatch: 'full' },
 ];
 
 @NgModule({
