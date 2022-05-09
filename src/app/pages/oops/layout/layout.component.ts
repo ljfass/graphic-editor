@@ -9,7 +9,7 @@ import {
 import { AreaComponent } from '../editor/core/common/area/area.component';
 import { StoreService } from '../editor/core/common/store/store.service';
 import { WidgetGroup } from '../editor/widget';
-import { ButtonSettingComponent } from '../editor/widget/button-setting/button-setting.component';
+// import { ButtonSettingComponent } from '../editor/widget/button-setting/button-setting.component';
 // import { ButtonComponent } from '../editor/widget/button/button.component';
 
 @Component({
@@ -45,9 +45,9 @@ export class LayoutComponent implements OnInit {
   settingContainer!: ViewContainerRef;
 
   onSelectRangeStart(event: MouseEvent): void {
-    event.preventDefault();
-    document.getSelection()?.removeAllRanges();
-    (document.activeElement as HTMLElement).blur();
+    // event.preventDefault();
+    // document.getSelection()?.removeAllRanges();
+    // (document.activeElement as HTMLElement).blur();
   }
 
   // 根据拖放dataTransfer的数据选中 - 用于添加到编辑区的组件

@@ -7,10 +7,8 @@ import { ButtonComponent } from '../button/button.component';
   templateUrl: './button-setting.component.html',
   styleUrls: ['./button-setting.component.less'],
 })
-export class ButtonSettingComponent implements OnInit {
-  WidgetInstance: any;
-
-  constructor() {}
+export class ButtonSettingComponent<T = ButtonComponent> implements OnInit {
+  WidgetInstance: ButtonComponent;
 
   ngOnInit(): void {}
 
