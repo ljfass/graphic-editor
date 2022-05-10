@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NzButtonSize, NzButtonType } from 'ng-zorro-antd/button';
+import { config } from '../config';
 
 @Component({
   selector: 'app-button',
@@ -9,7 +10,10 @@ import { NzButtonSize, NzButtonType } from 'ng-zorro-antd/button';
 export class ButtonComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const { font } = config;
+    this.text = JSON.parse(JSON.stringify(font));
+  }
 
   color: string = 'red';
 
@@ -20,4 +24,14 @@ export class ButtonComponent implements OnInit {
 
   size: NzButtonSize = 'large';
   type: NzButtonType = 'primary';
+
+  // text: typeof config.font;
+  text = config.font;
+  texts = {
+    color: 'black',
+    fontSize: 16,
+    lineHight: 16,
+    fontWeight: 400,
+    fontFamily: 'Georgia',
+  };
 }

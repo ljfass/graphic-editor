@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FromComponent } from '../from/from.component';
 
 @Component({
   selector: 'app-from-setting',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./from-setting.component.less'],
 })
 export class FromSettingComponent implements OnInit {
-  WidgetInstance: any;
+  WidgetInstance: FromComponent;
   constructor() {}
 
   ngOnInit(): void {}

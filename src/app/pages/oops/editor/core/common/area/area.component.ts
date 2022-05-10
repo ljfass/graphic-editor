@@ -1,9 +1,9 @@
 import {
   Component,
   ComponentFactoryResolver,
-  EventEmitter,
+  ComponentRef,
   OnInit,
-  Output,
+  Type,
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
@@ -19,11 +19,12 @@ export class AreaComponent implements OnInit {
   // areaHeading: string = '区域标题';
 
   // 传入模板组件
+  // widget: unknown;
   widget: any;
 
   // 根据模板组件创建的实例
-  WidgetInstance: any;
-  SettingInstance: any;
+  WidgetInstance: ComponentRef<any>;
+  SettingInstance: Type<any>;
 
   constructor(
     private cfr: ComponentFactoryResolver,
@@ -49,11 +50,14 @@ export class AreaComponent implements OnInit {
       );
       widgetInstance.changeDetectorRef.detectChanges(); // 强制刷新数据渲染(有时候不需要)
 
+      // console.log(widgetInstance);
+
       this.WidgetInstance = widgetInstance;
     }
   }
 
   toggleSetting() {
     this.StoreService.handleSubject(this.WidgetInstance, this.SettingInstance);
+    // console.log(this.SettingInstance);
   }
 }

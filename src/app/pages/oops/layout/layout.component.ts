@@ -3,6 +3,7 @@ import {
   ComponentFactoryResolver,
   HostListener,
   OnInit,
+  Type,
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
@@ -63,24 +64,27 @@ export class LayoutComponent implements OnInit {
     event.preventDefault();
   }
 
+  // setting: Type<any>;
+
   createWidget(index) {
     const { widget, setting } = WidgetGroup[index];
     const comFactory = this.cfr.resolveComponentFactory(AreaComponent);
-    console.log(comFactory);
-    const setFactory = this.cfr.resolveComponentFactory(setting as any);
+    const setFactory = this.cfr.resolveComponentFactory(setting);
 
     const comInstance = this.toolContainer.createComponent(comFactory);
+
     comInstance.instance.widget = widget;
-    this.settingContainer.clear();
-    const setInstance = this.settingContainer.createComponent(
-      setFactory
-    ) as any;
     comInstance.instance.SettingInstance = setting;
+
+    // 清楚其他widget的设置
+    this.settingContainer.clear();
+    const setInstance = this.settingContainer.createComponent(setFactory);
+
     setTimeout(() => {
       // 将容器组件内生成的Widget实例 - 给到对应的设置组件（用于修改设置Widget）
       if (comInstance.instance.WidgetInstance) {
-        setInstance.instance.WidgetInstance =
-          comInstance.instance.WidgetInstance.instance;
+        const { instance } = comInstance.instance.WidgetInstance;
+        setInstance.instance.WidgetInstance = instance;
       }
     });
   }
