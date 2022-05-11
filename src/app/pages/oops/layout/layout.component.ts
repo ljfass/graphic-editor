@@ -21,26 +21,25 @@ import { WidgetGroup } from '../editor/widget';
 export class LayoutComponent implements OnInit {
   constructor(
     private cfr: ComponentFactoryResolver,
-    private StoreService: StoreService
+    public StoreService: StoreService
   ) {}
 
   ngOnInit(): void {
-    this.StoreService.subject$.subscribe((setting: any) => {
-      // 点击不同Widget的时候拿到不同的Widget的实例 和 Widget的设置容器
-      const { WidgetInstance, SettingInstance } = setting;
+    /**
+     *点击编辑中的组件后切换不同的设置组件
+     */
+    this.StoreService.subject$.subscribe((setting) => {
+      const { instance, comSetting } = setting;
       this.settingContainer.clear();
-      const setFactory = this.cfr.resolveComponentFactory(SettingInstance);
       const setInstance = this.settingContainer.createComponent(
-        setFactory
-      ) as any;
-      setInstance.instance.WidgetInstance = WidgetInstance.instance;
+        this.cfr.resolveComponentFactory(comSetting)
+      );
+      setInstance.instance.WidgetInstance = instance.instance;
     });
   }
 
-  widgetInstance: Array<any> = [];
-
-  @ViewChild('toolContainer', { read: ViewContainerRef, static: false })
-  toolContainer!: ViewContainerRef;
+  @ViewChild('editableContainer', { read: ViewContainerRef, static: false })
+  editableContainer!: ViewContainerRef;
 
   @ViewChild('settingContainer', { read: ViewContainerRef, static: false })
   settingContainer!: ViewContainerRef;
@@ -52,11 +51,10 @@ export class LayoutComponent implements OnInit {
   }
 
   // 根据拖放dataTransfer的数据选中 - 用于添加到编辑区的组件
-  handleDrop(event: any) {
+  handleDrop(event: DragEvent) {
     let index = WidgetGroup.findIndex(
       (item) => item.type == event.dataTransfer.getData('text/plain')
     );
-    // this.createdWidgetShell(index);
     this.createWidget(index);
   }
 
@@ -64,22 +62,23 @@ export class LayoutComponent implements OnInit {
     event.preventDefault();
   }
 
-  // setting: Type<any>;
-
-  createWidget(index) {
-    const { widget, setting } = WidgetGroup[index];
+  /**
+   * 创建实例
+   */
+  createWidget(index: number) {
+    const { setting } = WidgetGroup[index];
     const comFactory = this.cfr.resolveComponentFactory(AreaComponent);
     const setFactory = this.cfr.resolveComponentFactory(setting);
 
-    const comInstance = this.toolContainer.createComponent(comFactory);
+    const comInstance = this.editableContainer.createComponent(comFactory);
 
-    comInstance.instance.widget = widget;
-    comInstance.instance.SettingInstance = setting;
+    comInstance.instance.YunTuWidget = WidgetGroup[index];
 
-    // 清楚其他widget的设置
+    // 更换Widget的设置组件
     this.settingContainer.clear();
     const setInstance = this.settingContainer.createComponent(setFactory);
 
+    // 将Widget实例交给设置组件
     setTimeout(() => {
       // 将容器组件内生成的Widget实例 - 给到对应的设置组件（用于修改设置Widget）
       if (comInstance.instance.WidgetInstance) {

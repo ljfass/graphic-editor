@@ -21,18 +21,21 @@
     .container_middle {
       border: 1px solid #ccc;
       min-width: 200px;
+      max-height: calc(100vh - 80px);
       /* 取剩余宽度 */
       flex-grow: 1;
       padding: 10px;
       height: 100%;
       .edit-container {
         height: 100%;
+        overflow-y: scroll;
       }
     }
 
     .container_right {
       width: 20%;
-      min-width: 200px;
+      min-width: 300px;
+      width: 300px;
       padding: 10px;
     }
   }

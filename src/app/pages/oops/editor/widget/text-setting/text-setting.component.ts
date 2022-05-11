@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TextComponent } from '../text/text.component';
 
 @Component({
@@ -7,18 +7,9 @@ import { TextComponent } from '../text/text.component';
   styleUrls: ['./text-setting.component.less'],
 })
 export class TextSettingComponent implements OnInit {
-  WidgetInstance: TextComponent;
+  @Input() WidgetInstance: TextComponent;
 
   constructor() {}
 
-  ngOnInit(): void {
-    // setTimeout(() => {
-    //   console.log(this.WidgetInstance.text);
-    // }, 1000);
-  }
-
-  // helloworld() {
-  //   console.log('hello world');
-  //   console.log(this.WidgetInstance.text);
-  // }
+  ngOnInit(): void {}
 }

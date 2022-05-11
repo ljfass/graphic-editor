@@ -1,15 +1,19 @@
 <div class="container">
   <header>
-    <h2 style="text-align: center">Visualization - Editor</h2>
+    <h2 style="text-align: center">
+      <a [routerLink]="['../accomplish']" routerLinkActive="router-link-active"
+        >Visualization - Editor</a
+      >
+      <!-- [routerLink]="['/accomplish']" routerLinkActive="router-link-active"  -->
+    </h2>
   </header>
   <main class="container_main">
-    <!-- Left sidebar -->
+    <!-- Left sidebar Widget组件选择区 -->
     <aside class="container_left">
-      <!-- <div class="container-title">组件库</div> -->
       <app-widget></app-widget>
     </aside>
 
-    <!-- Main content -->
+    <!-- Main content Widget组件编辑区 -->
     <article class="container_middle">
       <div class="edit-container">
         <div
@@ -18,12 +22,12 @@
           (drop)="handleDrop($event)"
           (dragover)="allowDrop($event)"
         >
-          <ng-template #toolContainer></ng-template>
+          <ng-template #editableContainer></ng-template>
         </div>
       </div>
     </article>
 
-    <!-- Right sidebar -->
+    <!-- Right sidebar Widget组件设置区 -->
     <nav class="container_right">
       <ng-template #settingContainer></ng-template>
     </nav>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditRegionComponent } from './edit-region.component';
+import { TableSettingComponent } from './table-setting.component';
 
-describe('EditRegionComponent', () => {
-  let component: EditRegionComponent;
-  let fixture: ComponentFixture<EditRegionComponent>;
+describe('TableSettingComponent', () => {
+  let component: TableSettingComponent;
+  let fixture: ComponentFixture<TableSettingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditRegionComponent ]
+      declarations: [ TableSettingComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditRegionComponent);
+    fixture = TestBed.createComponent(TableSettingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

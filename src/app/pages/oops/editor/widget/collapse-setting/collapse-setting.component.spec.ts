@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SettingViewComponent } from './setting-view.component';
+import { CollapseSettingComponent } from './collapse-setting.component';
 
-describe('SettingViewComponent', () => {
-  let component: SettingViewComponent;
-  let fixture: ComponentFixture<SettingViewComponent>;
+describe('CollapseSettingComponent', () => {
+  let component: CollapseSettingComponent;
+  let fixture: ComponentFixture<CollapseSettingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SettingViewComponent ]
+      declarations: [ CollapseSettingComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SettingViewComponent);
+    fixture = TestBed.createComponent(CollapseSettingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

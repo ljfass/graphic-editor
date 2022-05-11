@@ -1,9 +1,12 @@
-<div class="position universal-box" appHover="区域" (click)="toggleSetting()">
-  <div class="position" style="font-weight: 700" appHover="区块">
-    <div class="position box" appHover="标题">区域标题</div>
-  </div>
-  <hr />
-  <div class="position" appHover="内容">
-    <ng-template #widgetContainer></ng-template>
+<div [style.border]="selectedColor">
+  <div class="position universal-box" appHover="区域" (click)="toggleSetting()">
+    <div class="position" style="font-weight: 700" appHover="区块">
+      <div class="position box" appHover="标题">区域标题</div>
+    </div>
+
+    <hr />
+    <div class="position" appHover="内容">
+      <ng-template #widgetContainer></ng-template>
+    </div>
   </div>
 </div>

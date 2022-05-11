@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NzButtonSize, NzButtonType } from 'ng-zorro-antd/button';
 import AbstractWidget from '../abstract-widget';
 import { ButtonComponent } from '../button/button.component';
-import { config } from '../config';
+// import { config } from '../config';
 
 @Component({
   selector: 'app-button-setting',
@@ -13,7 +13,7 @@ export class ButtonSettingComponent<T = ButtonComponent>
   extends AbstractWidget
   implements OnInit
 {
-  WidgetInstance: ButtonComponent;
+  @Input() WidgetInstance: ButtonComponent;
 
   ngOnInit(): void {}
 
@@ -26,21 +26,6 @@ export class ButtonSettingComponent<T = ButtonComponent>
   }
 
   set type(value: NzButtonType) {
-    // "default" | "primary" | "dashed" | "danger" | "link" | "text"
     this.WidgetInstance.type = value;
   }
-
-  // radioValue = 'A';
-
-  // xuchengdong(): void {
-  //   this.text.fontSize++;
-  //   this.WidgetInstance.text = this.text;
-  //   // console.log(this.WidgetInstance.text);
-  //   console.log(this.WidgetInstance.text.fontSize);
-  // }
-
-  // chengdong() {
-  //   this.WidgetInstance.text.fontSize = 16;
-  //   // config.font.fontSize = 10;
-  // }
 }
