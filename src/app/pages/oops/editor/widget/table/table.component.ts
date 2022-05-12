@@ -43,66 +43,18 @@ interface Setting {
 })
 export class TableComponent implements OnInit {
   settingForm?: FormGroup;
-  listOfData: ItemData[] = [];
-  displayData: ItemData[] = [];
-  allChecked = false;
-  indeterminate = false;
-  fixedColumn = false;
+
+  listOfData: ItemData[] = []; // 表格中的数据
+
+  displayData: ItemData[] = []; // 分页显示的当前数据
+
+  allChecked = false; // 全选
+  indeterminate = false; // 不确定的 - 选中部分了
+
+  fixedColumn = false; //固定列
   scrollX: string | null = null;
   scrollY: string | null = null;
-  settingValue!: Setting;
-  listOfSwitch = [
-    { name: 'Bordered', formControlName: 'bordered' },
-    { name: 'Loading', formControlName: 'loading' },
-    { name: 'Pagination', formControlName: 'pagination' },
-    { name: 'PageSizeChanger', formControlName: 'sizeChanger' },
-    { name: 'Title', formControlName: 'title' },
-    { name: 'Column Header', formControlName: 'header' },
-    { name: 'Footer', formControlName: 'footer' },
-    { name: 'Expandable', formControlName: 'expandable' },
-    { name: 'Checkbox', formControlName: 'checkbox' },
-    { name: 'Fixed Header', formControlName: 'fixHeader' },
-    { name: 'No Result', formControlName: 'noResult' },
-    { name: 'Ellipsis', formControlName: 'ellipsis' },
-    { name: 'Simple Pagination', formControlName: 'simple' },
-  ];
-  listOfRadio = [
-    {
-      name: 'Size',
-      formControlName: 'size',
-      listOfOption: [
-        { value: 'default', label: 'Default' },
-        { value: 'middle', label: 'Middle' },
-        { value: 'small', label: 'Small' },
-      ],
-    },
-    {
-      name: 'Table Scroll',
-      formControlName: 'tableScroll',
-      listOfOption: [
-        { value: 'unset', label: 'Unset' },
-        { value: 'scroll', label: 'Scroll' },
-        { value: 'fixed', label: 'Fixed' },
-      ],
-    },
-    {
-      name: 'Table Layout',
-      formControlName: 'tableLayout',
-      listOfOption: [
-        { value: 'auto', label: 'Auto' },
-        { value: 'fixed', label: 'Fixed' },
-      ],
-    },
-    {
-      name: 'Pagination Position',
-      formControlName: 'position',
-      listOfOption: [
-        { value: 'top', label: 'Top' },
-        { value: 'bottom', label: 'Bottom' },
-        { value: 'both', label: 'Both' },
-      ],
-    },
-  ];
+  settingValue!: Setting; //设置修改的值（记录）
 
   currentPageDataChange($event: ItemData[]): void {
     this.displayData = $event;
@@ -166,9 +118,9 @@ export class TableComponent implements OnInit {
       position: 'bottom',
     });
     this.settingValue = this.settingForm.value;
-    this.settingForm.valueChanges.subscribe(
-      (value) => (this.settingValue = value)
-    );
+    this.settingForm.valueChanges.subscribe((value) => {
+      this.settingValue = value;
+    });
     this.settingForm.get('tableScroll')!.valueChanges.subscribe((scroll) => {
       this.fixedColumn = scroll === 'fixed';
       this.scrollX = scroll === 'scroll' || scroll === 'fixed' ? '100vw' : null;

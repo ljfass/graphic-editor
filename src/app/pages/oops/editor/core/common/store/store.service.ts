@@ -2,14 +2,13 @@ import { ComponentRef, Injectable, Type } from '@angular/core';
 import { Subject } from 'rxjs';
 // import { YunTuWidget } from '../../../widget';
 
-type myType = { instance: ComponentRef<any>; comSetting: Type<any> };
+type INSTANCE_SETTING = { instance: ComponentRef<any>; comSetting: Type<any> };
 
 interface Editable {
   id: number;
   type: string;
   state: boolean;
-  component: myType;
-  // YunTuWidget: YunTuWidget;
+  component: INSTANCE_SETTING;
   // [key: string]: any;
 }
 
@@ -24,7 +23,7 @@ export class StoreService {
    */
   store: Editable[] = [];
 
-  subject$ = new Subject<myType>();
+  subject$ = new Subject<INSTANCE_SETTING>();
 
   /**
    * 通知设置区更新
@@ -45,12 +44,9 @@ export class StoreService {
     let id = Math.random();
     this.store.push({
       id,
-      type: type,
+      type,
       state: true,
-      component: {
-        instance,
-        comSetting,
-      },
+      component: { instance, comSetting },
     });
 
     // 好多异步的问题啊
@@ -61,7 +57,7 @@ export class StoreService {
   }
 
   /**
-   *
+   * 发出通知选中的ID
    */
   subjectSelected$ = new Subject<number>();
 
@@ -88,7 +84,6 @@ export class StoreService {
    * 获取全部数据
    */
   getStore() {
-    // console.log(this.store);
     return this.store;
   }
 }

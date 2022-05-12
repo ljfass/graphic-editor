@@ -16,9 +16,14 @@
     <!-- Main content Widget组件编辑区 -->
     <article class="container_middle">
       <div class="edit-container">
-        <div
+        <!-- <div
           style="height: 100%; padding: 15px"
           (mousedown)="onSelectRangeStart($event)"
+          (drop)="handleDrop($event)"
+          (dragover)="allowDrop($event)"
+        > -->
+        <div
+          class="editor-template"
           (drop)="handleDrop($event)"
           (dragover)="allowDrop($event)"
         >

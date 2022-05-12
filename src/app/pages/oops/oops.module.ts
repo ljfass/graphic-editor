@@ -33,6 +33,7 @@ import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { CollapseComponent } from './editor/widget/collapse/collapse.component';
 import { CollapseSettingComponent } from './editor/widget/collapse-setting/collapse-setting.component';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { NzCollapseModule } from 'ng-zorro-antd/collapse';
     NzTableModule,
     NzSwitchModule,
     NzCollapseModule,
+    NzTabsModule,
   ],
 })
 export class OopsModule {}

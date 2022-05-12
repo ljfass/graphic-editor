@@ -1,6 +1,7 @@
 import {
   Component,
   ComponentFactoryResolver,
+  ComponentRef,
   HostListener,
   OnInit,
   Type,
@@ -24,17 +25,32 @@ export class LayoutComponent implements OnInit {
     public StoreService: StoreService
   ) {}
 
+  // 设置的实例
+  setInstance: ComponentRef<any>;
   ngOnInit(): void {
     /**
      *点击编辑中的组件后切换不同的设置组件
      */
     this.StoreService.subject$.subscribe((setting) => {
       const { instance, comSetting } = setting;
-      this.settingContainer.clear();
-      const setInstance = this.settingContainer.createComponent(
-        this.cfr.resolveComponentFactory(comSetting)
-      );
-      setInstance.instance.WidgetInstance = instance.instance;
+      //没有实例创建一个新的,如果有设置的实例 比较是否点击的是同一个
+      if (this.setInstance) {
+        if (this.setInstance.instance.WidgetInstance !== instance.instance) {
+          this.settingContainer.clear();
+          const setInstance = this.settingContainer.createComponent(
+            this.cfr.resolveComponentFactory(comSetting)
+          );
+          setInstance.instance.WidgetInstance = instance.instance;
+          this.setInstance = setInstance;
+        }
+      } else {
+        this.settingContainer.clear();
+        const setInstance = this.settingContainer.createComponent(
+          this.cfr.resolveComponentFactory(comSetting)
+        );
+        setInstance.instance.WidgetInstance = instance.instance;
+        this.setInstance = setInstance;
+      }
     });
   }
 
@@ -84,6 +100,7 @@ export class LayoutComponent implements OnInit {
       if (comInstance.instance.WidgetInstance) {
         const { instance } = comInstance.instance.WidgetInstance;
         setInstance.instance.WidgetInstance = instance;
+        this.setInstance = setInstance; //记录正在编辑中的设置实例
       }
     });
   }

@@ -1,1 +1,32 @@
-<p>table-setting works!</p>
+<nz-tabset nzType="card">
+  <nz-tab [nzTitle]="'属性'">
+    <div class="components-table-demo-control-bar">
+      <form nz-form nzLayout="inline" [formGroup]="settingForm!">
+        <nz-form-item *ngFor="let switch of listOfSwitch">
+          <nz-form-label> {{ switch.name }} </nz-form-label>
+          <nz-form-control>
+            <nz-switch [formControlName]="switch.formControlName"> </nz-switch>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+    </div>
+  </nz-tab>
+  <nz-tab [nzTitle]="'样式'">
+    <form nz-form nzLayout="inline" [formGroup]="settingForm!">
+      <nz-form-item *ngFor="let radio of listOfRadio">
+        <nz-form-control>
+          <nz-radio-group [formControlName]="radio.formControlName">
+            <label
+              *ngFor="let o of radio.listOfOption"
+              nz-radio
+              [nzValue]="o.value"
+              ngDefaultControl
+              >{{ o.label }}</label
+            >
+          </nz-radio-group>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </nz-tab>
+  <nz-tab [nzTitle]="'事件'">Content of Tab Pane </nz-tab>
+</nz-tabset>

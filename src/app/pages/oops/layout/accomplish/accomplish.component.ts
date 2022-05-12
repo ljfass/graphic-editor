@@ -6,7 +6,9 @@ import {
   ViewContainerRef,
 } from '@angular/core';
 import { StoreService } from '../../editor/core/common/store/store.service';
-import { WidgetGroup } from '../../editor/widget/index';
+import { WidgetGroup, YunTuWidget } from '../../editor/widget/index';
+
+type YunTu = Array<[YunTuWidget, object]>;
 
 @Component({
   selector: 'app-accomplish',
@@ -23,23 +25,37 @@ export class AccomplishComponent implements OnInit {
   accomplishContainer!: ViewContainerRef;
 
   ngOnInit(): void {
-    let arr = [];
+    let WidgetAndData: YunTu = [];
     this.storeService.getStore().map((item) => {
+      let { __ngContext__, ...params } = item.component.instance.instance;
       WidgetGroup.forEach((widget) => {
         if (item.type == widget.type) {
-          arr.push(widget);
+          WidgetAndData.push([widget, params]);
         }
       });
     });
-    this.arr = arr;
+    this.WidgetAndData = WidgetAndData;
   }
 
-  arr: any;
+  /**
+   * 编辑后的组件 + 数据组合
+   */
+  WidgetAndData: YunTu;
 
   createWidget() {
-    this.arr.forEach((com) => {
+    this.WidgetAndData.forEach(([com, params]) => {
       const comFactory = this.cfr.resolveComponentFactory(com.widget);
-      let widgetInstance = this.accomplishContainer.createComponent(comFactory);
+      let widgetInstance = this.accomplishContainer.createComponent(
+        comFactory
+      ) as any;
+
+      // 更新变更
+      widgetInstance.changeDetectorRef.detectChanges();
+
+      for (const key in params) {
+        widgetInstance.instance[`${key}`] = params[key]; //将数据放入实例当中
+      }
+      // 2次更新变更
       widgetInstance.changeDetectorRef.detectChanges();
     });
   }
@@ -47,27 +63,4 @@ export class AccomplishComponent implements OnInit {
   ngAfterViewInit() {
     this.createWidget();
   }
-
-  // createWidget(index: number) {
-  // const { setting } = WidgetGroup[index];
-  // const comFactory = this.cfr.resolveComponentFactory(AreaComponent);
-  // const setFactory = this.cfr.resolveComponentFactory(setting);
-
-  // const comInstance = this.editableContainer.createComponent(comFactory);
-
-  // comInstance.instance.YunTuWidget = WidgetGroup[index];
-
-  // // 更换Widget的设置组件
-  // this.settingContainer.clear();
-  // const setInstance = this.settingContainer.createComponent(setFactory);
-
-  // // 将Widget实例交给设置组件
-  // setTimeout(() => {
-  //   // 将容器组件内生成的Widget实例 - 给到对应的设置组件（用于修改设置Widget）
-  //   if (comInstance.instance.WidgetInstance) {
-  //     const { instance } = comInstance.instance.WidgetInstance;
-  //     setInstance.instance.WidgetInstance = instance;
-  //   }
-  // });
-  // }
 }

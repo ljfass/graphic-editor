@@ -21,12 +21,12 @@ export class HoverDirective {
     private container: ViewContainerRef // private templateRef: TemplateRef<any>
   ) {}
 
-  @HostListener('mouseover', ['$event']) onMouseEnter(event) {
+  @HostListener('mouseover', ['$event']) onMouseEnter(event: MouseEvent) {
     this.highlight(event);
     this.createElement();
   }
 
-  @HostListener('mouseout', ['$event']) onMouseLeave(event) {
+  @HostListener('mouseout', ['$event']) onMouseLeave(event: MouseEvent) {
     event.stopPropagation();
     event.stopImmediatePropagation();
 
@@ -40,8 +40,8 @@ export class HoverDirective {
     this.el.nativeElement.style.border = '1px dashed blue';
   }
 
-  @Input('appHover')
-  text: string;
+  @Input('appHover') text: string;
+
   ngOnInit() {
     // console.log(this.text);
   }
@@ -55,7 +55,6 @@ export class HoverDirective {
       var newItem = document.createElement('DIV');
       newItem.setAttribute('id', 'setArea');
       newItem.innerText = this.text;
-      // newItem.style.position = 'relative;';
       newItem.style.position = 'absolute';
       newItem.style.top = '-20px';
       newItem.style.right = '0px';
@@ -71,10 +70,10 @@ export class HoverDirective {
   }
 
   removeElement() {
-    let xcd = document.getElementById('setArea');
+    let setAreaNode = document.getElementById('setArea');
 
-    if (xcd) {
-      xcd.parentNode.removeChild(xcd);
+    if (setAreaNode) {
+      setAreaNode.parentNode.removeChild(setAreaNode);
     } else {
       return;
     }

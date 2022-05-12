@@ -15,8 +15,7 @@ export class HoverProDirective {
     private templateRef: TemplateRef<any>
   ) {}
 
-  @Input('appHoverPro')
-  name: any;
+  @Input('appHoverPro') name: any;
 
   ngOnInit() {
     // console.log(this.templateRef, this.container);
