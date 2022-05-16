@@ -99,7 +99,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.settingForm = this.formBuilder.group({
-      bordered: false,
+      bordered: true,
       loading: false,
       pagination: true,
       sizeChanger: false,

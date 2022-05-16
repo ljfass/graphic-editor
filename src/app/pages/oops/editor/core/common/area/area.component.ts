@@ -64,24 +64,47 @@ export class AreaComponent implements OnInit {
     );
     widgetInstance.changeDetectorRef.detectChanges(); // 强制刷新数据渲染(有时候不需要)
 
-    this.WidgetInstance = widgetInstance;
+    if (this.WidgetInstance) {
+      // 仓库有实例 - 这里也有 - 恢复实例
+      let index = this.StoreService.selectedOnlyInstance(this.WidgetInstance);
+      this.UUID = this.StoreService.getStore()[index].id;
 
-    // 创建完成后 - 将实例数据存入服务中 - 返回一个唯一ID值
-    this.UUID = this.StoreService.saveEditableWidget(
-      this.YunTuWidget.type,
-      widgetInstance,
-      this.YunTuWidget.setting
-    );
+      setTimeout(() => {
+        //烦死了，天天异步
+        widgetInstance.changeDetectorRef.detectChanges(); // 强制刷新数据渲染(有时候不需要)
 
-    // }
+        const { instance } = this.WidgetInstance;
+        let { __ngContext__, ...params } = instance;
+        for (const key in params) {
+          widgetInstance.instance[`${key}`] = params[key]; //将数据放入实例当中
+        }
+        this.WidgetInstance = widgetInstance; //将新建的实例赋值
+        widgetInstance.changeDetectorRef.detectChanges(); // 强制刷新数据渲染(有时候不需要)
+
+        this.StoreService.replaceInstance(index, widgetInstance); //更新数据
+      });
+    } else {
+      this.WidgetInstance = widgetInstance; //没有的时候创建组件实例
+      // 创建完成后 - 将实例数据存入服务中 - 返回一个唯一ID值
+      this.UUID = this.StoreService.saveEditableWidget(
+        widgetInstance,
+        this.YunTuWidget
+      );
+    }
+
+    // this.WidgetInstance = widgetInstance; //没有的时候创建组件实例
+    // // 创建完成后 - 将实例数据存入服务中 - 返回一个唯一ID值
+    // this.UUID = this.StoreService.saveEditableWidget(
+    //   widgetInstance,
+    //   this.YunTuWidget
+    // );
   }
+
+  // recoverInstance() {}
 
   // 点击不同组件的时候、通知设置区 更换 设置内容
   toggleSetting() {
-    this.StoreService.handleSubject(
-      this.WidgetInstance,
-      this.YunTuWidget.setting
-    );
+    this.StoreService.handleSubject(this.WidgetInstance, this.YunTuWidget);
     this.StoreService.selectedOnlyState(this.UUID);
     this.selected = false;
   }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NzButtonSize, NzButtonType } from 'ng-zorro-antd/button';
+import { Observable, Subject } from 'rxjs';
 import AbstractWidget from '../abstract-widget';
 import { ButtonComponent } from '../button/button.component';
 // import { config } from '../config';
@@ -9,10 +10,7 @@ import { ButtonComponent } from '../button/button.component';
   templateUrl: './button-setting.component.html',
   styleUrls: ['./button-setting.component.less'],
 })
-export class ButtonSettingComponent<T = ButtonComponent>
-  extends AbstractWidget
-  implements OnInit
-{
+export class ButtonSettingComponent extends AbstractWidget implements OnInit {
   @Input() WidgetInstance: ButtonComponent;
 
   ngOnInit(): void {}
@@ -21,11 +19,32 @@ export class ButtonSettingComponent<T = ButtonComponent>
     this.WidgetInstance.color = 'blue';
   }
 
-  set size(value: NzButtonSize) {
+  size: NzButtonSize;
+
+  set setSize(value: NzButtonSize) {
     this.WidgetInstance.size = value;
+    this.size = value;
+  }
+  get setSize() {
+    return this.size;
   }
 
-  set type(value: NzButtonType) {
+  type: NzButtonType;
+
+  set setType(value: NzButtonType) {
+    this.type = value;
     this.WidgetInstance.type = value;
+  }
+
+  get setType() {
+    return this.type;
+  }
+
+  ngAfterViewInit() {
+    // 手动执行
+    setTimeout(() => {
+      this.setSize = this.WidgetInstance.size;
+      this.setType = this.WidgetInstance.type;
+    });
   }
 }
