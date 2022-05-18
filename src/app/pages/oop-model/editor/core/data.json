@@ -1,0 +1,62 @@
+{
+    "title": "新页面",
+    "child": [
+        {
+            "title": "区域",
+            "child": [
+                {
+                    "title": "区块",
+                    "child": [
+                        {
+                            "direction": "LR",
+                            "child": [
+                                {
+                                    "component": "LR",
+                                    "name": "any"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "区域",
+            "child": [
+                {
+                    "title": "区块",
+                    "child": [
+                        {
+                            "direction": "LR",
+                            "child": [
+                                {
+                                    "component": "LR",
+                                    "name": "any"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "区域",
+            "child": [
+                {
+                    "title": "区块",
+                    "child": [
+                        {
+                            "direction": "LR",
+                            "child": [
+                                {
+                                    "component": "LR",
+                                    "name": "any"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

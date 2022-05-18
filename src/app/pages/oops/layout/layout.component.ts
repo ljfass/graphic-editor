@@ -129,9 +129,12 @@ export class LayoutComponent implements OnInit {
    * 使用模板创建小部件
    */
   useTemplateCreateWidget(widget: YunTuWidget, instance?: ComponentRef<any>) {
+    let a = this.cfr.resolveComponentFactory(AreaComponent);
+    console.log(a);
     const WIDGET_INSTANCE = this.editableContainer.createComponent(
-      this.cfr.resolveComponentFactory(AreaComponent) // 创建组件容器
+      a // 创建组件容器
     );
+    console.log(WIDGET_INSTANCE);
     // 将模板传递给容器实例
     WIDGET_INSTANCE.instance.YunTuWidget = widget;
     instance ? (WIDGET_INSTANCE.instance.WidgetInstance = instance) : ''; //有实例的时候传入实例

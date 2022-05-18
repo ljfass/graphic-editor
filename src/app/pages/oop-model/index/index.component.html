@@ -1,0 +1,56 @@
+<!-- <app-test></app-test> -->
+
+<div>
+  <ul>
+    <li
+      (dragstart)="$event.dataTransfer.setData('Text', 'xu')"
+      draggable="true"
+    >
+      拖拽数据
+    </li>
+    <li
+      (dragstart)="$event.dataTransfer.setData('Text', 'chen')"
+      draggable="true"
+    >
+      拖拽数据
+    </li>
+  </ul>
+</div>
+<!-- 
+<ng-template appCustomOf let-a [appCustomOf]="xuchengdong" [pa-customs]="frame">
+  <div>{{ a.name }}</div>
+</ng-template>
+
+<div appCheng [chen]="chen" [ccc]="frame">
+  <h1>测试结构型指令传值多个 @input接受</h1>
+</div> -->
+------------------------------------------
+
+<ng-template #frame>
+  <app-hello></app-hello>
+</ng-template>
+
+<!-- <ng-template #container>
+  <app-test></app-test>
+</ng-template> -->
+<div style="width: 400px; position: relative">
+  <div
+    style="border: 1px solid red; position: relative; width: 400px"
+    yunTu-Frame
+    [frame]="frame"
+  >
+    <app-test></app-test>
+  </div>
+</div>
+<br />
+<br />
+<br />
+<div style="width: 400px; position: relative">
+  <div yunTu-Frame [frame]="frame">
+    <app-test></app-test>
+  </div>
+</div>
+
+<div>
+  {{ data.getData() | json }}
+</div>

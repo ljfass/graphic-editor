@@ -1,0 +1,19 @@
+<div
+  class="container"
+  (drop)="handleDrop($event)"
+  (dragover)="allowDrop($event)"
+  style="position: relative"
+>
+  <ng-template *ngIf="!isShow" #xuchengdong></ng-template>
+  <div
+    *ngIf="isShow"
+    style="
+      height: 100%;
+      width: 100%;
+      background-color: #f1f1f1;
+      position: absolute;
+    "
+  >
+    放置数据的区域
+  </div>
+</div>
