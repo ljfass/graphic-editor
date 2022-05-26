@@ -1,0 +1,1291 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>graphic-editor documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">graphic-editor documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="请输入查询关键字"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>组件列表</li>
+  <li
+  >
+  LayoutComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>文件</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/oops/layout/layout.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>实现</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>元数据</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-layout</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./layout.component.less</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./layout.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">索引</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>属性列表</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#editableContainer" >editableContainer</a>
+                            </li>
+                            <li>
+                                <a href="#SetInstance" >SetInstance</a>
+                            </li>
+                            <li>
+                                <a href="#settingContainer" >settingContainer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#StoreService" >StoreService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>方法</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allowDrop" >allowDrop</a>
+                            </li>
+                            <li>
+                                <a href="#createSetComponentInstance" >createSetComponentInstance</a>
+                            </li>
+                            <li>
+                                <a href="#handleDrop" >handleDrop</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSelectRangeStart" >onSelectRangeStart</a>
+                            </li>
+                            <li>
+                                <a href="#restoreStore" >restoreStore</a>
+                            </li>
+                            <li>
+                                <a href="#useTemplateCreateWidget" >useTemplateCreateWidget</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">构造方法</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(cfr: <a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank">ComponentFactoryResolver</a>, StoreService: <a href="../injectables/StoreService.html" target="_self">StoreService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="23" class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:23</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>参数列表 :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>名称</td>
+                                                    <td>类型</td>
+                                                <td>可选的</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>cfr</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ComponentFactoryResolver" target="_blank" >ComponentFactoryResolver</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            否
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>StoreService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StoreService.html" target="_self" >StoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            否
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        方法
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="allowDrop"></a>
+                    <span class="name">
+                        <span ><b>allowDrop</b></span>
+                        <a href="#allowDrop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>allowDrop(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="98"
+                            class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>参数列表 :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>类型</td>
+                                    <td>可选的</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MouseEvent</code>
+                                    </td>
+
+                                    <td>
+                                        否
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createSetComponentInstance"></a>
+                    <span class="name">
+                        <span ><b>createSetComponentInstance</b></span>
+                        <a href="#createSetComponentInstance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createSetComponentInstance(setting: Type<any>, instance?: ComponentRef<any>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="152"
+                            class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:152</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>创建设置区</p>
+</div>
+
+                    <div class="io-description">
+                        <b>参数列表 :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>类型</td>
+                                    <td>可选的</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>setting</td>
+                                    <td>
+                                            <code>Type&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        否
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>instance</td>
+                                    <td>
+                                            <code>ComponentRef&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        是
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleDrop"></a>
+                    <span class="name">
+                        <span ><b>handleDrop</b></span>
+                        <a href="#handleDrop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleDrop(event: DragEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="90"
+                            class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>参数列表 :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>类型</td>
+                                    <td>可选的</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>DragEvent</code>
+                                    </td>
+
+                                    <td>
+                                        否
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="71"
+                            class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="31"
+                            class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSelectRangeStart"></a>
+                    <span class="name">
+                        <span ><b>onSelectRangeStart</b></span>
+                        <a href="#onSelectRangeStart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSelectRangeStart(event: MouseEvent)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="83"
+                            class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>参数列表 :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>类型</td>
+                                    <td>可选的</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MouseEvent</code>
+                                    </td>
+
+                                    <td>
+                                        否
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="restoreStore"></a>
+                    <span class="name">
+                        <span ><b>restoreStore</b></span>
+                        <a href="#restoreStore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>restoreStore()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="163"
+                            class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:163</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>当列表包含数据的时候。进来先加载已经添加过的数据</p>
+</div>
+
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="useTemplateCreateWidget"></a>
+                    <span class="name">
+                        <span ><b>useTemplateCreateWidget</b></span>
+                        <a href="#useTemplateCreateWidget"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>useTemplateCreateWidget(widget: <a href="../interfaces/YunTuWidget.html" target="_self">YunTuWidget</a>, instance?: ComponentRef<any>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="131"
+                            class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>使用模板创建小部件</p>
+</div>
+
+                    <div class="io-description">
+                        <b>参数列表 :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>名称</td>
+                                    <td>类型</td>
+                                    <td>可选的</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>widget</td>
+                                    <td>
+                                                <code><a href="../interfaces/YunTuWidget.html" target="_self" >YunTuWidget</a></code>
+                                    </td>
+
+                                    <td>
+                                        否
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>instance</td>
+                                    <td>
+                                            <code>ComponentRef&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        是
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        属性列表
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editableContainer"></a>
+                    <span class="name">
+                        <span ><b>editableContainer</b></span>
+                        <a href="#editableContainer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>类型 : </i>        <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>装饰器列表 : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;editableContainer&#x27;, {read: ViewContainerRef, static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="78" class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:78</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SetInstance"></a>
+                    <span class="name">
+                        <span ><b>SetInstance</b></span>
+                        <a href="#SetInstance"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>类型 : </i>    <code>ComponentRef&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="30" class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="settingContainer"></a>
+                    <span class="name">
+                        <span ><b>settingContainer</b></span>
+                        <a href="#settingContainer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>类型 : </i>        <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>装饰器列表 : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;settingContainer&#x27;, {read: ViewContainerRef, static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="81" class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="StoreService"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>StoreService</b></span>
+                        <a href="#StoreService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>类型 : </i>        <code><a href="../injectables/StoreService.html" target="_self" >StoreService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="26" class="link-to-prism">src/app/pages/oops/layout/layout.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  ComponentFactoryResolver,
+  ComponentRef,
+  HostListener,
+  OnInit,
+  Type,
+  ViewChild,
+  ViewContainerRef,
+} from &#x27;@angular/core&#x27;;
+import { A } from &#x27;../../oop/list&#x27;;
+import { AreaComponent } from &#x27;../editor/core/common/area/area.component&#x27;;
+import { StoreService } from &#x27;../editor/core/common/store/store.service&#x27;;
+import { WidgetGroup, YunTuWidget } from &#x27;../editor/widget&#x27;;
+// import { ButtonSettingComponent } from &#x27;../editor/widget/button-setting/button-setting.component&#x27;;
+// import { ButtonComponent } from &#x27;../editor/widget/button/button.component&#x27;;
+
+@Component({
+  selector: &#x27;app-layout&#x27;,
+  templateUrl: &#x27;./layout.component.html&#x27;,
+  styleUrls: [&#x27;./layout.component.less&#x27;],
+})
+export class LayoutComponent implements OnInit {
+  constructor(
+    private cfr: ComponentFactoryResolver,
+    public StoreService: StoreService
+  ) {}
+
+  // 设置的实例
+  SetInstance: ComponentRef&lt;any&gt;;
+  ngOnInit(): void {
+    /**
+     *点击编辑中的组件后切换不同的设置组件
+     */
+    this.StoreService.subject$.subscribe((setting) &#x3D;&gt; {
+      const { instance, YunTuWidget } &#x3D; setting;
+      // let { __ngContext__, ...params } &#x3D; item.component.instance.instance;
+      //没有实例创建一个新的,如果有设置的实例 比较是否点击的是同一个
+      if (this.SetInstance) {
+        if (this.SetInstance.instance.WidgetInstance !&#x3D;&#x3D; instance.instance) {
+          this.settingContainer.clear();
+          const setInstance &#x3D; this.settingContainer.createComponent(
+            this.cfr.resolveComponentFactory(YunTuWidget.setting)
+          );
+          // setInstance.changeDetectorRef.detectChanges();
+          // for (const key in instance.instance) {
+          //   console.log(
+          //     setInstance.instance.WidgetInstance,
+          //     instance.instance[key]
+          //   );
+          // }
+          // setInstance.changeDetectorRef.detectChanges();
+
+          setInstance.instance.WidgetInstance &#x3D; instance.instance;
+          this.SetInstance &#x3D; setInstance;
+        }
+      } else {
+        this.settingContainer.clear();
+        const setInstance &#x3D; this.settingContainer.createComponent(
+          this.cfr.resolveComponentFactory(YunTuWidget.setting)
+        );
+
+        setInstance.instance.WidgetInstance &#x3D; instance.instance;
+        this.SetInstance &#x3D; setInstance;
+
+        setInstance.changeDetectorRef.detectChanges();
+      }
+    });
+  }
+
+  ngAfterViewInit() {
+    // this.restoreStore();
+    // this.useTemplateCreateWidget(WidgetGroup[0]);
+    this.restoreStore();
+  }
+
+  @ViewChild(&#x27;editableContainer&#x27;, { read: ViewContainerRef, static: false })
+  editableContainer!: ViewContainerRef;
+
+  @ViewChild(&#x27;settingContainer&#x27;, { read: ViewContainerRef, static: false })
+  settingContainer!: ViewContainerRef;
+
+  onSelectRangeStart(event: MouseEvent): void {
+    // event.preventDefault();
+    // document.getSelection()?.removeAllRanges();
+    // (document.activeElement as HTMLElement).blur();
+  }
+
+  // 根据拖放dataTransfer的数据选中 - 用于添加到编辑区的组件
+  handleDrop(event: DragEvent) {
+    let index &#x3D; WidgetGroup.findIndex(
+      (item) &#x3D;&gt; item.type &#x3D;&#x3D; event.dataTransfer.getData(&#x27;text/plain&#x27;)
+    );
+    // this.createWidget(index);
+    this.useTemplateCreateWidget(WidgetGroup[index]);
+  }
+
+  allowDrop(event: MouseEvent) {
+    event.preventDefault();
+  }
+
+  /**
+   * 创建实例
+   */
+  // createWidget(index: number) {
+  // const { setting } &#x3D; WidgetGroup[index];
+  // const comFactory &#x3D; this.cfr.resolveComponentFactory(AreaComponent);
+  // const setFactory &#x3D; this.cfr.resolveComponentFactory(setting);
+  // this.useTemplateCreateWidget(WidgetGroup[index]);
+  // const comInstance &#x3D; this.editableContainer.createComponent(comFactory);
+  // comInstance.instance.YunTuWidget &#x3D; WidgetGroup[index];
+
+  // // 更换Widget的设置组件
+  // this.settingContainer.clear();
+  // const setInstance &#x3D; this.settingContainer.createComponent(setFactory);
+
+  // // 将Widget实例交给设置组件
+  // setTimeout(() &#x3D;&gt; {
+  //   // 将容器组件内生成的Widget实例 - 给到对应的设置组件（用于修改设置Widget）
+  //   if (comInstance.instance.WidgetInstance) {
+  //     const { instance } &#x3D; comInstance.instance.WidgetInstance;
+  //     setInstance.instance.WidgetInstance &#x3D; instance;
+  //     this.SetInstance &#x3D; setInstance; //记录正在编辑中的设置实例
+  //   }
+  // });
+  // }
+
+  /**
+   * 使用模板创建小部件
+   */
+  useTemplateCreateWidget(widget: YunTuWidget, instance?: ComponentRef&lt;any&gt;) {
+    let a &#x3D; this.cfr.resolveComponentFactory(AreaComponent);
+    console.log(a);
+    const WIDGET_INSTANCE &#x3D; this.editableContainer.createComponent(
+      a // 创建组件容器
+    );
+    console.log(WIDGET_INSTANCE);
+    // 将模板传递给容器实例
+    WIDGET_INSTANCE.instance.YunTuWidget &#x3D; widget;
+    instance ? (WIDGET_INSTANCE.instance.WidgetInstance &#x3D; instance) : &#x27;&#x27;; //有实例的时候传入实例
+    setTimeout(() &#x3D;&gt; {
+      this.createSetComponentInstance(
+        widget.setting,
+        WIDGET_INSTANCE.instance.WidgetInstance.instance
+      );
+    });
+  }
+
+  /**
+   * 创建设置区
+   */
+  createSetComponentInstance(setting: Type&lt;any&gt;, instance?: ComponentRef&lt;any&gt;) {
+    this.settingContainer.clear(); //先清空
+    const SET_INSTANCE &#x3D; this.settingContainer.createComponent(
+      this.cfr.resolveComponentFactory(setting)
+    );
+    SET_INSTANCE.instance.WidgetInstance &#x3D; instance;
+  }
+
+  /**
+   * 当列表包含数据的时候。进来先加载已经添加过的数据
+   */
+  restoreStore() {
+    if (this.StoreService.getStore().length &gt; 0) {
+      console.log(&#x27;恢复所有的数据&#x27;);
+      setTimeout(() &#x3D;&gt; {
+        // 这里的使用了异步 - 是可能需要调整的
+
+        this.StoreService.getStore().forEach((item, i) &#x3D;&gt; {
+          const { YunTuWidget, instance } &#x3D; item.component;
+          this.useTemplateCreateWidget(YunTuWidget, instance);
+          // let index &#x3D; WidgetGroup.findIndex((i) &#x3D;&gt; i.type &#x3D;&#x3D; item.type);
+          // const comFactory &#x3D; this.cfr.resolveComponentFactory(AreaComponent);
+          // const comInstance &#x3D;
+          //   this.editableContainer.createComponent(comFactory);
+          // comInstance.instance.YunTuWidget &#x3D; WidgetGroup[index];
+          // comInstance.changeDetectorRef.detectChanges();
+          // if (i &#x3D;&#x3D;&#x3D; 0) {
+          //   const setFactory &#x3D; this.cfr.resolveComponentFactory(
+          //     this.StoreService.getStore()[0].component.comSetting
+          //   );
+          //   const setInstance &#x3D;
+          //     this.settingContainer.createComponent(setFactory);
+          //   const { instance } &#x3D; comInstance.instance.WidgetInstance;
+          //   setInstance.instance.WidgetInstance &#x3D; instance;
+          //   comInstance.changeDetectorRef.detectChanges();
+          //   this.SetInstance &#x3D; setInstance; //记录正在编辑中的设置实例
+          //   comInstance.changeDetectorRef.detectChanges();
+          // }
+        });
+      });
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;header&gt;
+    &lt;h2 style&#x3D;&quot;text-align: center&quot;&gt;
+      &lt;a [routerLink]&#x3D;&quot;[&#x27;../accomplish&#x27;]&quot; routerLinkActive&#x3D;&quot;router-link-active&quot;
+        &gt;Visualization - Editor&lt;/a
+      &gt;
+      &lt;!-- [routerLink]&#x3D;&quot;[&#x27;/accomplish&#x27;]&quot; routerLinkActive&#x3D;&quot;router-link-active&quot;  --&gt;
+    &lt;/h2&gt;
+  &lt;/header&gt;
+  &lt;main class&#x3D;&quot;container_main&quot;&gt;
+    &lt;!-- Left sidebar Widget组件选择区 --&gt;
+    &lt;aside class&#x3D;&quot;container_left&quot;&gt;
+      &lt;app-widget&gt;&lt;/app-widget&gt;
+    &lt;/aside&gt;
+
+    &lt;!-- Main content Widget组件编辑区 --&gt;
+    &lt;article class&#x3D;&quot;container_middle&quot;&gt;
+      &lt;div class&#x3D;&quot;edit-container&quot;&gt;
+        &lt;!-- &lt;div
+          style&#x3D;&quot;height: 100%; padding: 15px&quot;
+          (mousedown)&#x3D;&quot;onSelectRangeStart($event)&quot;
+          (drop)&#x3D;&quot;handleDrop($event)&quot;
+          (dragover)&#x3D;&quot;allowDrop($event)&quot;
+        &gt; --&gt;
+        &lt;div
+          class&#x3D;&quot;editor-template&quot;
+          (drop)&#x3D;&quot;handleDrop($event)&quot;
+          (dragover)&#x3D;&quot;allowDrop($event)&quot;
+        &gt;
+          &lt;ng-template #editableContainer&gt;&lt;/ng-template&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+
+    &lt;!-- Right sidebar Widget组件设置区 --&gt;
+    &lt;nav class&#x3D;&quot;container_right&quot;&gt;
+      &lt;ng-template #settingContainer&gt;&lt;/ng-template&gt;
+    &lt;/nav&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;
+    &lt;div style&#x3D;&quot;text-align: center; line-height: 30px&quot;&gt;Footer&lt;/div&gt;
+  &lt;/footer&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./layout.component.less</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebeaf0; //护眼色
+
+  .container_main {
+    /* 取剩余高度 */
+    flex-grow: 1;
+
+    /* 布局左侧边栏、主要内容和右侧边栏 */
+    display: flex;
+    flex-direction: row;
+    .container_left {
+      width: 15%;
+      min-width: 200px;
+    }
+
+    .container_middle {
+      border: 1px solid #ccc;
+      min-width: 200px;
+      max-height: calc(100vh - 80px);
+      /* 取剩余宽度 */
+      flex-grow: 1;
+      padding: 10px;
+      height: 100%;
+      .edit-container {
+        height: 100%;
+        overflow-y: scroll;
+        .editor-template {
+          height: 100%;
+          padding: 15px;
+        }
+      }
+    }
+
+    .container_right {
+      width: 20%;
+      min-width: 300px;
+      width: 300px;
+      padding: 10px;
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>图例</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html 元素</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>组件</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>带指令的Html元素</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <header>    <h2 style="text-align: center">      <a [routerLink]="[\'../accomplish\']" routerLinkActive="router-link-active"        >Visualization - Editor</a      >      <!-- [routerLink]="[\'/accomplish\']" routerLinkActive="router-link-active"  -->    </h2>  </header>  <main class="container_main">    <!-- Left sidebar Widget组件选择区 -->    <aside class="container_left">      <app-widget></app-widget>    </aside>    <!-- Main content Widget组件编辑区 -->    <article class="container_middle">      <div class="edit-container">        <!-- <div          style="height: 100%; padding: 15px"          (mousedown)="onSelectRangeStart($event)"          (drop)="handleDrop($event)"          (dragover)="allowDrop($event)"        > -->        <div          class="editor-template"          (drop)="handleDrop($event)"          (dragover)="allowDrop($event)"        >          <ng-template #editableContainer></ng-template>        </div>      </div>    </article>    <!-- Right sidebar Widget组件设置区 -->    <nav class="container_right">      <ng-template #settingContainer></ng-template>    </nav>  </main>  <footer>    <div style="text-align: center; line-height: 30px">Footer</div>  </footer></div></div>'
+    var COMPONENTS = [{'name': 'AccomplishComponent', 'selector': 'app-accomplish'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AreaComponent', 'selector': 'app-area'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'ButtonSettingComponent', 'selector': 'app-button-setting'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ChipsComponent', 'selector': 'app-chips'},{'name': 'CollapseComponent', 'selector': 'app-collapse'},{'name': 'CollapseSettingComponent', 'selector': 'app-collapse-setting'},{'name': 'Demo1Component', 'selector': 'app-demo1'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DragDynamicComponentComponent', 'selector': 'app-drag-dynamic-component'},{'name': 'FromComponent', 'selector': 'app-from'},{'name': 'FromSettingComponent', 'selector': 'app-from-setting'},{'name': 'HelloComponent', 'selector': 'app-hello'},{'name': 'IndexComponent', 'selector': 'app-index'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LibComponentsComponent', 'selector': 'app-lib-components'},{'name': 'OopComponent', 'selector': 'app-oop'},{'name': 'RulerComponent', 'selector': 'ng-ruler'},{'name': 'SettingComponent', 'selector': 'app-setting'},{'name': 'TableComponent', 'selector': 'app-table'},{'name': 'TableSettingComponent', 'selector': 'app-table-setting'},{'name': 'TestComponent', 'selector': 'app-test'},{'name': 'TextComponent', 'selector': 'app-text'},{'name': 'TextSettingComponent', 'selector': 'app-text-setting'},{'name': 'UdlrDragBugComponent', 'selector': 'app-udlr-drag-bug'},{'name': 'ViewChildDynamicComponentComponent', 'selector': 'app-view-child-dynamic-component'},{'name': 'WidgetComponent', 'selector': 'app-widget'},{'name': 'WidgetComponent', 'selector': 'app-widget'}];
+    var DIRECTIVES = [{'name': 'ChengDirective', 'selector': '[appCheng]'},{'name': 'CustomDirective', 'selector': '[appCustomOf]'},{'name': 'FrameDirective', 'selector': '[yunTu-Frame]'},{'name': 'HoverDirective', 'selector': '[appHover]'},{'name': 'HoverProDirective', 'selector': '[appHoverPro]'},{'name': 'XuDirective', 'selector': '[appXu]'}];
+    var ACTUAL_COMPONENT = {'name': 'LayoutComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> 匹配的结果 "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">无匹配的结果 "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LayoutComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,7 +1,6 @@
 import { ComponentRef, Injectable, Type } from '@angular/core';
 import { Subject } from 'rxjs';
 import { YunTuWidget } from '../../../widget';
-// import { YunTuWidget } from '../../../widget';
 
 type INSTANCE_SETTING = {
   instance: ComponentRef<any>;

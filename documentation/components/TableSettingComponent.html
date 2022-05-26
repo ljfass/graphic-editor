@@ -1,0 +1,832 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>graphic-editor documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">graphic-editor documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="请输入查询关键字"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>组件列表</li>
+  <li
+  >
+  TableSettingComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>文件</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/oops/editor/widget/table-setting/table-setting.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>实现</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+    </p>
+
+
+<section>
+    <h3>元数据</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-table-setting</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./table-setting.component.less</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./table-setting.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">索引</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>属性列表</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#listOfRadio" >listOfRadio</a>
+                            </li>
+                            <li>
+                                <a href="#listOfSwitch" >listOfSwitch</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">可选的</span>
+                                <a href="#settingForm" >settingForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>方法</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>输入属性</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#WidgetInstance" >WidgetInstance</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">构造方法</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(formBuilder: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="47" class="link-to-prism">src/app/pages/oops/editor/widget/table-setting/table-setting.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>参数列表 :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>名称</td>
+                                                    <td>类型</td>
+                                                <td>可选的</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            否
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">输入属性</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WidgetInstance"></a>
+                        <b>WidgetInstance</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>类型 : </i>        <code><a href="../components/TableComponent.html" target="_self" >TableComponent</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">被定义在 <a href="" data-line="47" class="link-to-prism">src/app/pages/oops/editor/widget/table-setting/table-setting.component.ts:47</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        方法
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="73"
+                            class="link-to-prism">src/app/pages/oops/editor/widget/table-setting/table-setting.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">被定义在 <a href="" data-line="71"
+                            class="link-to-prism">src/app/pages/oops/editor/widget/table-setting/table-setting.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>返回 : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        属性列表
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listOfRadio"></a>
+                    <span class="name">
+                        <span ><b>listOfRadio</b></span>
+                        <a href="#listOfRadio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>类型 : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>缺省值 : </i><code>[
+    {
+      name: &#x27;Size&#x27;,
+      formControlName: &#x27;size&#x27;,
+      listOfOption: [
+        { value: &#x27;default&#x27;, label: &#x27;Default&#x27; },
+        { value: &#x27;middle&#x27;, label: &#x27;Middle&#x27; },
+        { value: &#x27;small&#x27;, label: &#x27;Small&#x27; },
+      ],
+    },
+    {
+      name: &#x27;Table Scroll&#x27;,
+      formControlName: &#x27;tableScroll&#x27;,
+      listOfOption: [
+        { value: &#x27;unset&#x27;, label: &#x27;Unset&#x27; },
+        { value: &#x27;scroll&#x27;, label: &#x27;Scroll&#x27; },
+        { value: &#x27;fixed&#x27;, label: &#x27;Fixed&#x27; },
+      ],
+    },
+    {
+      name: &#x27;Table Layout&#x27;,
+      formControlName: &#x27;tableLayout&#x27;,
+      listOfOption: [
+        { value: &#x27;auto&#x27;, label: &#x27;Auto&#x27; },
+        { value: &#x27;fixed&#x27;, label: &#x27;Fixed&#x27; },
+      ],
+    },
+    {
+      name: &#x27;Pagination Position&#x27;,
+      formControlName: &#x27;position&#x27;,
+      listOfOption: [
+        { value: &#x27;top&#x27;, label: &#x27;Top&#x27; },
+        { value: &#x27;bottom&#x27;, label: &#x27;Bottom&#x27; },
+        { value: &#x27;both&#x27;, label: &#x27;Both&#x27; },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="123" class="link-to-prism">src/app/pages/oops/editor/widget/table-setting/table-setting.component.ts:123</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listOfSwitch"></a>
+                    <span class="name">
+                        <span ><b>listOfSwitch</b></span>
+                        <a href="#listOfSwitch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>类型 : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>缺省值 : </i><code>[
+    { name: &#x27;Bordered&#x27;, formControlName: &#x27;bordered&#x27; },
+    { name: &#x27;Loading&#x27;, formControlName: &#x27;loading&#x27; },
+    { name: &#x27;Pagination&#x27;, formControlName: &#x27;pagination&#x27; },
+    { name: &#x27;PageSizeChanger&#x27;, formControlName: &#x27;sizeChanger&#x27; },
+    { name: &#x27;Title&#x27;, formControlName: &#x27;title&#x27; },
+    { name: &#x27;Column Header&#x27;, formControlName: &#x27;header&#x27; },
+    { name: &#x27;Footer&#x27;, formControlName: &#x27;footer&#x27; },
+    { name: &#x27;Expandable&#x27;, formControlName: &#x27;expandable&#x27; },
+    { name: &#x27;Checkbox&#x27;, formControlName: &#x27;checkbox&#x27; },
+    { name: &#x27;Fixed Header&#x27;, formControlName: &#x27;fixHeader&#x27; },
+    { name: &#x27;No Result&#x27;, formControlName: &#x27;noResult&#x27; },
+    { name: &#x27;Ellipsis&#x27;, formControlName: &#x27;ellipsis&#x27; },
+    { name: &#x27;Simple Pagination&#x27;, formControlName: &#x27;simple&#x27; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="108" class="link-to-prism">src/app/pages/oops/editor/widget/table-setting/table-setting.component.ts:108</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="settingForm"></a>
+                    <span class="name">
+                            <span class="modifier">可选的</span>
+                        <span ><b>settingForm</b></span>
+                        <a href="#settingForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>类型 : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>缺省值 : </i><code>this.formBuilder.group({
+    bordered: false,
+    loading: false,
+    pagination: true,
+    sizeChanger: false,
+    title: true,
+    header: false,
+    footer: false,
+    expandable: true,
+    checkbox: true,
+    fixHeader: false,
+    noResult: false,
+    ellipsis: false,
+    simple: false,
+    size: &#x27;small&#x27;,
+    tableScroll: &#x27;unset&#x27;,
+    tableLayout: &#x27;auto&#x27;,
+    position: &#x27;bottom&#x27;,
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">被定义在 <a href="" data-line="51" class="link-to-prism">src/app/pages/oops/editor/widget/table-setting/table-setting.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit, AfterViewInit } from &#x27;@angular/core&#x27;;
+import { FormBuilder, FormGroup } from &#x27;@angular/forms&#x27;;
+import {
+  NzTableLayout,
+  NzTablePaginationPosition,
+  NzTableSize,
+} from &#x27;ng-zorro-antd/table&#x27;;
+import { TableComponent } from &#x27;../table/table.component&#x27;;
+
+// interface ItemData {
+//   name: string;
+//   age: number | string;
+//   address: string;
+//   checked: boolean;
+//   expand: boolean;
+//   description: string;
+//   disabled?: boolean;
+// }
+
+// interface Setting {
+//   bordered: boolean;
+//   loading: boolean;
+//   pagination: boolean;
+//   sizeChanger: boolean;
+//   title: boolean;
+//   header: boolean;
+//   footer: boolean;
+//   expandable: boolean;
+//   checkbox: boolean;
+//   fixHeader: boolean;
+//   noResult: boolean;
+//   ellipsis: boolean;
+//   simple: boolean;
+//   size: NzTableSize;
+//   tableScroll: string;
+//   tableLayout: NzTableLayout;
+//   position: NzTablePaginationPosition;
+// }
+
+@Component({
+  selector: &#x27;app-table-setting&#x27;,
+  templateUrl: &#x27;./table-setting.component.html&#x27;,
+  styleUrls: [&#x27;./table-setting.component.less&#x27;],
+})
+export class TableSettingComponent implements OnInit, AfterViewInit {
+  // 传入的需要修改设置的实例
+  @Input() WidgetInstance: TableComponent;
+
+  constructor(private formBuilder: FormBuilder) {}
+
+  settingForm?: FormGroup &#x3D; this.formBuilder.group({
+    bordered: false,
+    loading: false,
+    pagination: true,
+    sizeChanger: false,
+    title: true,
+    header: false,
+    footer: false,
+    expandable: true,
+    checkbox: true,
+    fixHeader: false,
+    noResult: false,
+    ellipsis: false,
+    simple: false,
+    size: &#x27;small&#x27;,
+    tableScroll: &#x27;unset&#x27;,
+    tableLayout: &#x27;auto&#x27;,
+    position: &#x27;bottom&#x27;,
+  });
+
+  ngOnInit(): void {}
+
+  ngAfterViewInit() {
+    // setTimeout(() &#x3D;&gt; {
+    this.settingForm &#x3D; this.formBuilder.group({
+      bordered: false,
+      loading: false,
+      pagination: true,
+      sizeChanger: false,
+      title: true,
+      header: true,
+      footer: true,
+      expandable: true,
+      checkbox: true,
+      fixHeader: false,
+      noResult: false,
+      ellipsis: false,
+      simple: false,
+      size: &#x27;small&#x27;,
+      tableScroll: &#x27;unset&#x27;,
+      tableLayout: &#x27;auto&#x27;,
+      position: &#x27;bottom&#x27;,
+    });
+    this.settingForm.valueChanges.subscribe((value) &#x3D;&gt; {
+      this.WidgetInstance.settingForm.patchValue(value);
+      console.log(this.WidgetInstance);
+    });
+    // });
+
+    // setTimeout(() &#x3D;&gt; {
+    if (this.WidgetInstance) {
+      // 如果实例存在且有可能修改过~ 读取修改后的配置 ~ 根据需要修改的属性来获取值
+      this.settingForm.patchValue(this.WidgetInstance.settingValue);
+    }
+    // });
+  }
+
+  listOfSwitch &#x3D; [
+    { name: &#x27;Bordered&#x27;, formControlName: &#x27;bordered&#x27; },
+    { name: &#x27;Loading&#x27;, formControlName: &#x27;loading&#x27; },
+    { name: &#x27;Pagination&#x27;, formControlName: &#x27;pagination&#x27; },
+    { name: &#x27;PageSizeChanger&#x27;, formControlName: &#x27;sizeChanger&#x27; },
+    { name: &#x27;Title&#x27;, formControlName: &#x27;title&#x27; },
+    { name: &#x27;Column Header&#x27;, formControlName: &#x27;header&#x27; },
+    { name: &#x27;Footer&#x27;, formControlName: &#x27;footer&#x27; },
+    { name: &#x27;Expandable&#x27;, formControlName: &#x27;expandable&#x27; },
+    { name: &#x27;Checkbox&#x27;, formControlName: &#x27;checkbox&#x27; },
+    { name: &#x27;Fixed Header&#x27;, formControlName: &#x27;fixHeader&#x27; },
+    { name: &#x27;No Result&#x27;, formControlName: &#x27;noResult&#x27; },
+    { name: &#x27;Ellipsis&#x27;, formControlName: &#x27;ellipsis&#x27; },
+    { name: &#x27;Simple Pagination&#x27;, formControlName: &#x27;simple&#x27; },
+  ];
+  listOfRadio &#x3D; [
+    {
+      name: &#x27;Size&#x27;,
+      formControlName: &#x27;size&#x27;,
+      listOfOption: [
+        { value: &#x27;default&#x27;, label: &#x27;Default&#x27; },
+        { value: &#x27;middle&#x27;, label: &#x27;Middle&#x27; },
+        { value: &#x27;small&#x27;, label: &#x27;Small&#x27; },
+      ],
+    },
+    {
+      name: &#x27;Table Scroll&#x27;,
+      formControlName: &#x27;tableScroll&#x27;,
+      listOfOption: [
+        { value: &#x27;unset&#x27;, label: &#x27;Unset&#x27; },
+        { value: &#x27;scroll&#x27;, label: &#x27;Scroll&#x27; },
+        { value: &#x27;fixed&#x27;, label: &#x27;Fixed&#x27; },
+      ],
+    },
+    {
+      name: &#x27;Table Layout&#x27;,
+      formControlName: &#x27;tableLayout&#x27;,
+      listOfOption: [
+        { value: &#x27;auto&#x27;, label: &#x27;Auto&#x27; },
+        { value: &#x27;fixed&#x27;, label: &#x27;Fixed&#x27; },
+      ],
+    },
+    {
+      name: &#x27;Pagination Position&#x27;,
+      formControlName: &#x27;position&#x27;,
+      listOfOption: [
+        { value: &#x27;top&#x27;, label: &#x27;Top&#x27; },
+        { value: &#x27;bottom&#x27;, label: &#x27;Bottom&#x27; },
+        { value: &#x27;both&#x27;, label: &#x27;Both&#x27; },
+      ],
+    },
+  ];
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;nz-tabset nzType&#x3D;&quot;card&quot;&gt;
+  &lt;nz-tab [nzTitle]&#x3D;&quot;&#x27;属性&#x27;&quot;&gt;
+    &lt;div class&#x3D;&quot;components-table-demo-control-bar&quot;&gt;
+      &lt;form nz-form nzLayout&#x3D;&quot;inline&quot; [formGroup]&#x3D;&quot;settingForm!&quot;&gt;
+        &lt;nz-form-item *ngFor&#x3D;&quot;let switch of listOfSwitch&quot;&gt;
+          &lt;nz-form-label&gt; {{ switch.name }} &lt;/nz-form-label&gt;
+          &lt;nz-form-control&gt;
+            &lt;nz-switch [formControlName]&#x3D;&quot;switch.formControlName&quot;&gt; &lt;/nz-switch&gt;
+          &lt;/nz-form-control&gt;
+        &lt;/nz-form-item&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/nz-tab&gt;
+  &lt;nz-tab [nzTitle]&#x3D;&quot;&#x27;样式&#x27;&quot;&gt;
+    &lt;form nz-form nzLayout&#x3D;&quot;inline&quot; [formGroup]&#x3D;&quot;settingForm!&quot;&gt;
+      &lt;nz-form-item *ngFor&#x3D;&quot;let radio of listOfRadio&quot;&gt;
+        &lt;nz-form-control&gt;
+          &lt;nz-radio-group [formControlName]&#x3D;&quot;radio.formControlName&quot;&gt;
+            &lt;label
+              *ngFor&#x3D;&quot;let o of radio.listOfOption&quot;
+              nz-radio
+              [nzValue]&#x3D;&quot;o.value&quot;
+              ngDefaultControl
+              &gt;{{ o.label }}&lt;/label
+            &gt;
+          &lt;/nz-radio-group&gt;
+        &lt;/nz-form-control&gt;
+      &lt;/nz-form-item&gt;
+    &lt;/form&gt;
+  &lt;/nz-tab&gt;
+  &lt;nz-tab [nzTitle]&#x3D;&quot;&#x27;事件&#x27;&quot;&gt;Content of Tab Pane &lt;/nz-tab&gt;
+&lt;/nz-tabset&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./table-setting.component.less</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>图例</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html 元素</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>组件</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>带指令的Html元素</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><nz-tabset nzType="card">  <nz-tab [nzTitle]="\'属性\'">    <div class="components-table-demo-control-bar">      <form nz-form nzLayout="inline" [formGroup]="settingForm!">        <nz-form-item *ngFor="let switch of listOfSwitch">          <nz-form-label> {{ switch.name }} </nz-form-label>          <nz-form-control>            <nz-switch [formControlName]="switch.formControlName"> </nz-switch>          </nz-form-control>        </nz-form-item>      </form>    </div>  </nz-tab>  <nz-tab [nzTitle]="\'样式\'">    <form nz-form nzLayout="inline" [formGroup]="settingForm!">      <nz-form-item *ngFor="let radio of listOfRadio">        <nz-form-control>          <nz-radio-group [formControlName]="radio.formControlName">            <label              *ngFor="let o of radio.listOfOption"              nz-radio              [nzValue]="o.value"              ngDefaultControl              >{{ o.label }}</label            >          </nz-radio-group>        </nz-form-control>      </nz-form-item>    </form>  </nz-tab>  <nz-tab [nzTitle]="\'事件\'">Content of Tab Pane </nz-tab></nz-tabset></div>'
+    var COMPONENTS = [{'name': 'AccomplishComponent', 'selector': 'app-accomplish'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AreaComponent', 'selector': 'app-area'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'ButtonComponent', 'selector': 'app-button'},{'name': 'ButtonSettingComponent', 'selector': 'app-button-setting'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ChipsComponent', 'selector': 'app-chips'},{'name': 'CollapseComponent', 'selector': 'app-collapse'},{'name': 'CollapseSettingComponent', 'selector': 'app-collapse-setting'},{'name': 'Demo1Component', 'selector': 'app-demo1'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DemoComponent', 'selector': 'app-demo'},{'name': 'DragDynamicComponentComponent', 'selector': 'app-drag-dynamic-component'},{'name': 'FromComponent', 'selector': 'app-from'},{'name': 'FromSettingComponent', 'selector': 'app-from-setting'},{'name': 'HelloComponent', 'selector': 'app-hello'},{'name': 'IndexComponent', 'selector': 'app-index'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LibComponentsComponent', 'selector': 'app-lib-components'},{'name': 'OopComponent', 'selector': 'app-oop'},{'name': 'RulerComponent', 'selector': 'ng-ruler'},{'name': 'SettingComponent', 'selector': 'app-setting'},{'name': 'TableComponent', 'selector': 'app-table'},{'name': 'TableSettingComponent', 'selector': 'app-table-setting'},{'name': 'TestComponent', 'selector': 'app-test'},{'name': 'TextComponent', 'selector': 'app-text'},{'name': 'TextSettingComponent', 'selector': 'app-text-setting'},{'name': 'UdlrDragBugComponent', 'selector': 'app-udlr-drag-bug'},{'name': 'ViewChildDynamicComponentComponent', 'selector': 'app-view-child-dynamic-component'},{'name': 'WidgetComponent', 'selector': 'app-widget'},{'name': 'WidgetComponent', 'selector': 'app-widget'}];
+    var DIRECTIVES = [{'name': 'ChengDirective', 'selector': '[appCheng]'},{'name': 'CustomDirective', 'selector': '[appCustomOf]'},{'name': 'FrameDirective', 'selector': '[yunTu-Frame]'},{'name': 'HoverDirective', 'selector': '[appHover]'},{'name': 'HoverProDirective', 'selector': '[appHoverPro]'},{'name': 'XuDirective', 'selector': '[appXu]'}];
+    var ACTUAL_COMPONENT = {'name': 'TableSettingComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> 匹配的结果 "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">无匹配的结果 "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TableSettingComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
